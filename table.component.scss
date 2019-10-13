@@ -1,0 +1,21 @@
+.ht-table {
+    font-size: 13px;
+    font-weight: 400;
+
+    td {
+        border: 1px solid #f9f9f9;
+        padding-left: 47px;
+    }
+
+    tr {
+        &:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        &:hover td {
+            border-color: #cccccc;
+        }
+    }
+}
+
+

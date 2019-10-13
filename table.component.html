@@ -1,13 +1,12 @@
-<table border="1">
+<table class="ht-table">
     <thead>
         <ng-container [ngTemplateOutlet]="headerRow?.templateRef"></ng-container>
     </thead>
 
     <tbody>
-        <ng-container
-            *ngFor="let item of dataSource"
-            [ngTemplateOutlet]="row?.templateRef"
-            [ngTemplateOutletContext]="{$implicit: item}"></ng-container>
+        <ng-container *ngFor="let item of dataSource"
+                       [ngTemplateOutlet]="row?.templateRef"
+                       [ngTemplateOutletContext]="{$implicit: item}"></ng-container>
     </tbody>
 
     <tfoot>

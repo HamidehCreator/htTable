@@ -1,13 +1,4 @@
-import {
-    AfterContentInit,
-    AfterViewInit,
-    ChangeDetectionStrategy,
-    Component,
-    ContentChild,
-    ElementRef, Input,
-    OnInit,
-    ViewChild
-} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ContentChild, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import {HeaderRowDirective} from '@src/app/shared/material/table/directives/header-row.directive';
 import {FooterRowDirective} from '@src/app/shared/material/table/directives/footer-row.directive';
 import {RowDirective} from '@src/app/shared/material/table/directives/row.directive';
@@ -16,7 +7,8 @@ import {RowDirective} from '@src/app/shared/material/table/directives/row.direct
     selector: 'ht-table',
     templateUrl: './table.component.html',
     styleUrls: ['./table.component.scss'],
-    // changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None
 })
 export class TableComponent implements OnInit {
     /// Properties
